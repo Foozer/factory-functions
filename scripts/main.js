@@ -109,7 +109,8 @@ const modString = (() => {
 
 let myModule = (() => {
     const _privateProperty = 'Hello World';
+    const publicProperty = 'I am public';
     const _privateMethod = () => console.log(_privateProperty);
     const publicMethod = () => _privateMethod();
-    return { publicMethod }
+    return { publicMethod, publicProperty }
 })();
