@@ -92,3 +92,17 @@ const Player = (name, level) => {
 const jimmie = Player('jim', 10);
 const badGuy = Player('jeff', 5);
 
+//IIFE (Immediately Invoked Function Expression)
+const calculator = (() => {
+    const add = (a, b) => a + b;
+    const sub = (a, b) => a - b;
+    const mul = (a, b) => a * b;
+    const div = (a, b) => a / b;
+    return { add, sub, mul, div };
+})();
+
+const modString = (() => {
+    const cap = (string) => string.toUpperCase();
+    const low = (string) => string.toLowerCase();
+    return { cap, low };
+})();
