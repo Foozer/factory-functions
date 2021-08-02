@@ -106,3 +106,10 @@ const modString = (() => {
     const low = (string) => string.toLowerCase();
     return { cap, low };
 })();
+
+let myModule = (() => {
+    const _privateProperty = 'Hello World';
+    const _privateMethod = () => console.log(_privateProperty);
+    const publicMethod = () => _privateMethod();
+    return { publicMethod }
+})();
