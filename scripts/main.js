@@ -49,3 +49,19 @@ const toggleNav = function () {
 nav.addEventListener('click', toggleNav, false);
 
 
+const FactoryFuntion = string => {
+    const capitalizeString = () => string.toUpperCase();
+    const printString = () => console.log(`----${capitalizeString()}----`);
+    return { printString };
+};
+
+const taco = FactoryFuntion('taco');
+/*
+printString(); // ERROR!!
+capitalizeString(); // ERROR!!
+taco.capitalizeString(); // ERROR!!
+taco.printString(); // this prints "----TACO----"
+*/
+
+
+
